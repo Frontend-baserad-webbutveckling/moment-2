@@ -1,0 +1,144 @@
+/* Grundläggande */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #50abe7;
+}
+
+/* Huvudmeny */
+header {
+    background-color: #e15808;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hamburgermeny */
+li {
+    list-style: none;
+}
+
+/* Länk namnen */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.site_name {
+    font-size: 2em;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+}
+
+/* HAMBURGERMENU START */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+}
+
+
+/* Sektioner */
+section {
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 75%;
+    margin: 20px auto;
+    display: flex;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: relative;
+        left: 400px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Ändring av width för hur menyn ska synas */
+    .nav-menu {
+        position: absolute;
+        left: -110%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #e15808;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+
+    /* Avståndet mellan länkarna top and bottom */
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    /* active görs i JavaScript, denna rad tar tillbaka länkarna från att att ha varit -100%
+    alternativt display: none (reverse?) */
+    .nav-menu.active {
+        left: 0;
+    }
+}

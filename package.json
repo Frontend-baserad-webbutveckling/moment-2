@@ -1,15 +1,16 @@
 {
-  "name": "moment-2",
+  "name": "moment-1",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Automatisering &amp; publicering",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel",
+    "build": "parcel build"
   },
-  "keywords": [],
-  "author": "",
+  "source": "src/index.html",
+  "author": "Babak Jameei",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "sharp": "^0.31.3"
   }
 }
