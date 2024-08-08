@@ -11,6 +11,12 @@
 //     navMenu.classList.remove("active");
 // }))
 
+// Ser till att hela sidan har laddats helt innan js-koden koden körs
+document.addEventListener('DOMContentLoaded', function() {
+    
+});
+
+
 // fetch anrop till server
 async function getData() {
     try {
