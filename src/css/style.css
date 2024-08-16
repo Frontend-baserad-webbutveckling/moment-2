@@ -119,8 +119,8 @@ table {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
-        position: relative;
-        left: 400px;
+        position: absolute;
+        left: 85%;
     }
 
     .hamburger.active .bar:nth-child(2) {
