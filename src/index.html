@@ -1,112 +1,157 @@
 <!DOCTYPE html>
 <html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moment 2</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moment 1</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <a href="#sektion1" class="site_name">Moment 1</a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#sektion1" class="nav-link">Startsida</a>
-                <li class="nav-item">
-                    <a href="#sektion2" class="nav-link">Bilder</a>
-                <li class="nav-item">
-                    <a href="#sektion3" class="nav-link">Arbetsprocessen</a>
-                <li class="nav-item">
-                    <a href="#sektion4" class="nav-link">Ramschema</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <a href="#sektion1" class="site_name">Moment 2</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#sektion1" class="nav-link">Startsida</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#sektion2" class="nav-link">Bilder</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#sektion3" class="nav-link">Arbetsprocessen</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#sektion4" class="nav-link">Ramschema</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
 
     <main>
         <section id="sektion1">
             <h1>Uppgift</h1>
             <p>
-                Inför moment 1 ska vi skapa en grundstruktur för webbutveckling kompletterat med automatisering av vissa
-                uppgifter.
-                Det ska vara för en webbplats som innehåller HTML, CSS, JavaScript och bilder.
-                Jag kommer använda Node.js tillsammans med Parcel för automatisera dessa uppgifter.
-                En package.json-fil ska finnas med alla installerade paket där det ska gå att återställa applikationen
-                med 'npm install'.
-                De uppgifter som skall automatiseras är minifiering av CSS och JavaScript, minifiering av HTML,
-                optimering av bilder, bakåtkompabilitet i genererade
-                filer och kopiering av arbetsfiler till mapp för publicering med optimerade filer.
-
-                Sedan skapas en demowebbplats som ska innehålla en huvudmeny med minst tre undersidor, en för förklaring
-                av uppgiften, en som visar minst 5 bilder, och en som beskriver arbetsprocessen.
+              Inför moment 1 ska vi skapa en grundstruktur för webbutveckling
+              kompletterat med automatisering av vissa uppgifter. Det ska vara för
+              en webbplats som innehåller HTML, CSS, JavaScript och bilder. Jag
+              kommer använda Node.js tillsammans med Parcel för automatisera dessa
+              uppgifter. En package.json-fil ska finnas med alla installerade paket
+              där det ska gå att återställa applikationen med 'npm install'. De
+              uppgifter som skall automatiseras är minifiering av CSS och
+              JavaScript, minifiering av HTML, optimering av bilder,
+              bakåtkompabilitet i genererade filer och kopiering av arbetsfiler till
+              mapp för publicering med optimerade filer. Sedan skapas en
+              demowebbplats som ska innehålla en huvudmeny med minst tre undersidor,
+              en för förklaring av uppgiften, en som visar minst 5 bilder, och en
+              som beskriver arbetsprocessen.
             </p>
-        </section>
-
-        <section id="sektion2">
+          </section>
+    
+          <section id="sektion2">
             <h1>Bilder</h1>
-            <p>Innehåll för sektion 2.</p>
             <picture>
-                <img src="images\wallhaven-2ywd3y.png?as=webp&width=1200" type="image/webp" alt="some">
-                <img src="images\wallhaven-9d28vd.png?as=webp&width=1200" type="image/webp" alt="some">
-                <img src="images\wallhaven-vqy2jp.jpg?as=webp&width=1200" type="image/webp" alt="some">
-                <img src="images\wallhaven-werowr.png?as=webp&width=1200" type="image/webp" alt="some">
-                <img src="images\wallhaven-yxgmll.png?as=webp&width=1200" type="image/webp" alt="some">
+              <source
+                srcset="images/wallhaven-2ywd3y.png?as=webp&width=1200"
+                type="image/webp"
+              />
+              <img src="images/wallhaven-2ywd3y.png" alt="some" />
             </picture>
-        </section>
-
-        <section id="sektion3">
-            <h1>Arbetsprocessen 3</h1>
-            <p>Jag började med att skapa en mapp för moment 1. Genom kommandot npm init, så initierade jag ett nytt npm
-                projekt där jag fyllde i mitt namn och beskrivning av projektet.
-                Detta skapade ett package.json fil i mappen för moment 1. Jag initierade även ett github repo till
-                mappen och skapade en ny branch för utveckling (development) tanken är att göra
-                allt arbete samt tester innan jag mergar till main branch för publicering. Jag skapade även en gitignore
-                fil där jag lägger till undantag som jag inte vill spara i mitt git repo.
-
-                Tillbaka till npm projektet, så installerade jag parcell med kommandot npm install parcell --save -d.
-                vilket skapade en ny mapp vid namn "node_modules" som jag lade till i gitignore.
-                vilket även uppdaterade package.json filen med så kallade dependencies vilket betyder att när kommandot
-                npm install körs, så installeras samtliga paket (i detta fall parcell)
-                jag skapade en mapp vid namn src där jag lägger min index.html fil, jag skapar mappar för JavaScript,
-                CSS och Bilder och det är i denna mapp jag gör alla mina ändringar.
-                Jag la även till scripts i package.jason filen för start och build så jag kan använda kommandon som npm
-                run start/build.
-
-                Jag skapade en enkel html sida med 3 sektioner, samt en fungerande hamburgarmeny som fälls ut efter
-                klick med hjälp av JavaScript. jag fyllde i texten som krävdes inför momentet
-                länkade till sammanssamtliga bilder och la till stil med hjälp av CSS.
-
-                När allt var klart kunde jag köra kommandot 'npm run build' och parcell skötte minifiering och
-                transpilering av samtliga filer och flyttade dessa optimerade filer till dist-mappen
+            <picture>
+              <source
+                srcset="images/wallhaven-9d28vd.png?as=webp&width=1200"
+                type="image/webp"
+              />
+              <img src="images/wallhaven-9d28vd.png" alt="some" />
+            </picture>
+    
+            <picture>
+              <source
+                srcset="images/wallhaven-vqy2jp.jpg?as=webp&width=1200"
+                type="image/webp"
+              />
+              <img src="images/wallhaven-vqy2jp.jpg" alt="some" />
+            </picture>
+    
+            <picture>
+              <source
+                srcset="images/wallhaven-werowr.png?as=webp&width=1200"
+                type="image/webp"
+              />
+              <img src="images/wallhaven-werowr.png" alt="some" />
+            </picture>
+    
+            <picture>
+              <source
+                srcset="images/wallhaven-yxgmll.png?as=webp&width=1200"
+                type="image/webp"
+              />
+              <img src="images/wallhaven-yxgmll.png" alt="some" />
+            </picture>
+          </section>
+    
+          <section id="sektion3">
+            <h1>Arbetsprocessen</h1>
+            <p>
+              Jag började med att skapa en mapp för moment 1. Genom kommandot npm
+              init, så initierade jag ett nytt npm projekt där jag fyllde i mitt
+              namn och beskrivning av projektet. Detta skapade ett package.json fil
+              i mappen för moment 1. Jag initierade även ett github repo till mappen
+              och skapade en ny branch för utveckling (development) tanken är att
+              göra allt arbete samt tester innan jag mergar till main branch för
+              publicering. Jag skapade även en gitignore fil där jag lägger till
+              undantag som jag inte vill spara i mitt git repo. <br /><br />
+              Tillbaka till npm projektet, så installerade jag parcell med kommandot
+              npm install parcell --save -d. vilket skapade en ny mapp vid namn
+              "node_modules" som jag lade till i gitignore. vilket även uppdaterade
+              package.json filen med så kallade dependencies vilket betyder att när
+              kommandot npm install körs, så installeras samtliga paket (i detta
+              fall parcell) jag skapade en mapp vid namn src där jag lägger min
+              index.html fil, jag skapar mappar för JavaScript, CSS och Bilder och
+              det är i denna mapp jag gör alla mina ändringar. Jag la även till
+              scripts i package.jason filen för start och build så jag kan använda
+              kommandon som npm run start/build. <br /><br />
+              Jag skapade en enkel html sida med 3 sektioner, samt en fungerande
+              hamburgarmeny som fälls ut efter klick med hjälp av JavaScript. jag
+              fyllde i texten som krävdes inför momentet länkade till samtliga
+              bilder och la till stil med hjälp av CSS. <br /><br />
+              Bilder konverteras från png till webp och en bildbredd på 1200 pixlar
+              med hjälp av parcels inbygga bildverktyg När allt var klart kunde jag
+              köra kommandot 'npm run build' och parcell skötte minifiering och
+              transpilering av samtliga filer och flyttade dessa optimerade filer
+              till dist-mappen
             </p>
-        </section>
-        <section id="section4">
-            <h1>Ramschema</h1>
-            <input type="text" id="search-input" placeholder="Sök kurs (kurskod eller kursnamn)">
-            <table id="course-table">
-                <thead>
-                    <tr>
-                        <th data-type="code">Kurskod</th>
-                        <th data-type="name">Kursnamn</th>
-                        <th data-type="progression">Progression</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Rader fyllda från main.js -->
-                </tbody>
-            </table>
-        </section>
+          </section>
+      <section id="sektion4">
+        <h1>Ramschema</h1>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Sök kurs (kurskod eller kursnamn)"
+        />
+        <table id="course-table">
+          <thead>
+            <tr>
+              <th class="click" data-type="code">Kurskod</th>
+              <th class="click" data-type="name">Kursnamn</th>
+              <th class="click" data-type="progression">Progression</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rader fyllda från main.js -->
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <script src="js/main.js" type="module"></script>
-</body>
-
+  </body>
 </html>
